@@ -4,6 +4,8 @@
     "group:allNonMajor",
     ":semanticCommitTypeAll(chore)"
   ],
+  "dependencyDashboard": true,
+  "labels": ["renovate"],
   "rangeStrategy": "bump",
   "npm": {
     "commitMessageTopic": "{{prettyDepType}} {{depName}}"
