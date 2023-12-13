@@ -1,6 +1,6 @@
 # Renovate Config
 
-[![Valide Config](https://github.com/AREA44/renovate-config/actions/workflows/validate.yml/badge.svg)](https://github.com/AREA44/renovate-config/actions/workflows/validate.yml)
+[![Validate Config](https://github.com/AREA44/renovate-config/actions/workflows/validate.yml/badge.svg)](https://github.com/AREA44/renovate-config/actions/workflows/validate.yml)
 
 Shared Renovate Bot Config Presets.
 
