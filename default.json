@@ -1,16 +1,14 @@
 {
   "description": "Shareable Renovate config presets by AREA44",
   "extends": [
-    "config:base",
+    "config:recommended",
     "group:allNonMajor",
     ":semanticCommitTypeAll(chore)"
   ],
   "dependencyDashboard": true,
   "labels": ["renovate"],
   "rangeStrategy": "bump",
-  "npm": {
-    "commitMessageTopic": "{{prettyDepType}} {{depName}}"
-  },
+  "npm": { "commitMessageTopic": "{{prettyDepType}} {{depName}}" },
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
