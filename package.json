@@ -1,15 +1,13 @@
 {
-  "name": "renovate-config-unjs",
+  "name": "@area44/renovate-config",
   "version": "0.0.0",
-  "description": "Renovate Bot config for unjs repositories",
+  "description": "Shareable Renovate config presets by AREA44.",
   "license": "MIT",
-  "repository": "unjs/renovate-config",
+  "repository": "area44/renovate-config",
   "scripts": {
     "test": "renovate-config-validator ./default.json"
   },
-  "files": [
-    "default.json"
-  ],
+  "files": ["default.json"],
   "devDependencies": {
     "renovate": "^37.27.0"
   }
