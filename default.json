@@ -1,4 +1,5 @@
 {
+  "description": "Shareable Renovate config presets by AREA44",
   "extends": [
     "config:base",
     "group:allNonMajor",
