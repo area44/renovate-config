@@ -2,17 +2,17 @@
   "description": "Shareable Renovate config presets by AREA44",
   "extends": [
     "config:recommended",
+    ":dependencyDashboard",
     "group:allNonMajor",
-    ":semanticCommitTypeAll(chore)"
+    ":semanticCommitTypeAll(chore)",
+    ":automergeAll"
   ],
-  "dependencyDashboard": true,
   "labels": ["renovate"],
   "rangeStrategy": "bump",
   "npm": { "commitMessageTopic": "{{prettyDepType}} {{depName}}" },
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true,
       "automergeSchedule": ["after 1am and before 2am"],
       "schedule": ["after 2am and before 3am on Sunday"]
     }
