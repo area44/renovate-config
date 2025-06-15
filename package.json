@@ -17,7 +17,7 @@
   },
   "files": ["default.json"],
   "devDependencies": {
-    "renovate": "^40.48.4"
+    "renovate": "^40.55.1"
   },
   "packageManager": "pnpm@10.12.1"
 }
