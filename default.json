@@ -1,6 +1,8 @@
 {
+  "description": "Shareable Renovate config presets by AREA44",
   "extends": [
     "config:recommended",
+    ":dependencyDashboard",
     "docker:pinDigests",
     "helpers:pinGitHubActionDigests",
     ":configMigration",
@@ -8,11 +10,13 @@
     "security:minimumReleaseAgeNpm",
     ":maintainLockFilesWeekly",
     "group:allNonMajor",
-    ":semanticCommitTypeAll(chore)"
+    ":semanticCommitTypeAll(chore)",
+    ":automergeAll"
   ],
   "meteor": {
     "enabled": false
   },
+  "labels": ["renovate"],
   "minimumReleaseAge": "1 day",
   "rangeStrategy": "bump",
   "npm": {
@@ -25,7 +29,8 @@
         "patch",
         "pin",
         "digest"
-      ]
+      ],
+      "schedule": ["on Sunday"]
     }
   ]
 }
