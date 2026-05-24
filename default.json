@@ -3,16 +3,33 @@
   "extends": [
     "config:recommended",
     ":dependencyDashboard",
+    "docker:pinDigests",
+    "helpers:pinGitHubActionDigests",
+    ":configMigration",
+    "abandonments:recommended",
+    "security:minimumReleaseAgeNpm",
+    ":maintainLockFilesWeekly",
     "group:allNonMajor",
     ":semanticCommitTypeAll(chore)",
     ":automergeAll"
   ],
+  "meteor": {
+    "enabled": false
+  },
   "labels": ["renovate"],
+  "minimumReleaseAge": "1 day",
   "rangeStrategy": "bump",
-  "npm": { "commitMessageTopic": "{{prettyDepType}} {{depName}}" },
+  "npm": {
+    "commitMessageTopic": "{{prettyDepType}} {{depName}}"
+  },
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
       "schedule": ["on Sunday"]
     }
   ]
