@@ -15,9 +15,11 @@
     "validate": "renovate-config-validator default.json",
     "test": "pnpm validate"
   },
-  "files": ["default.json"],
+  "files": [
+    "default.json"
+  ],
   "devDependencies": {
     "renovate": "^43.31.1"
   },
-  "packageManager": "pnpm@10.30.1"
+  "packageManager": "pnpm@11.2.2"
 }
