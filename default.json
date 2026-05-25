@@ -20,17 +20,14 @@
   "npm": {
     "commitMessageTopic": "{{prettyDepType}} {{depName}}"
   },
+  "vulnerabilityAlerts": {
+    "labels": ["security", "renovate"],
+    "commitMessageSuffix": "[SECURITY]"
+  },
   "packageRules": [
     {
       "matchDatasources": ["npm"],
       "minimumReleaseAge": "24 hours"
-    },
-    {
-      "matchIsVulnerable": true,
-      "minimumReleaseAge": "0 hours",
-      "internalChecksFilter": "strict",
-      "schedule": ["at any time"],
-      "labels": ["security", "renovate"]
     },
     {
       "matchUpdateTypes": [
@@ -39,7 +36,6 @@
         "pin",
         "digest"
       ],
-      "matchIsVulnerable": false,
       "schedule": ["on Saturday"]
     }
   ]
