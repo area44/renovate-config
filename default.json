@@ -7,7 +7,6 @@
     "helpers:pinGitHubActionDigests",
     ":configMigration",
     "abandonments:recommended",
-    "security:minimumReleaseAgeNpm",
     ":maintainLockFilesWeekly",
     "group:allNonMajor",
     ":semanticCommitTypeAll(chore)",
@@ -17,12 +16,22 @@
     "enabled": false
   },
   "labels": ["renovate"],
-  "minimumReleaseAge": "1 day",
   "rangeStrategy": "bump",
   "npm": {
     "commitMessageTopic": "{{prettyDepType}} {{depName}}"
   },
   "packageRules": [
+    {
+      "matchDatasources": ["npm"],
+      "minimumReleaseAge": "24 hours"
+    },
+    {
+      "matchIsVulnerable": true,
+      "minimumReleaseAge": "0 hours",
+      "internalChecksFilter": "strict",
+      "schedule": ["at any time"],
+      "labels": ["security", "renovate"]
+    },
     {
       "matchUpdateTypes": [
         "minor",
@@ -30,7 +39,8 @@
         "pin",
         "digest"
       ],
-      "schedule": ["on Sunday"]
+      "matchIsVulnerable": false,
+      "schedule": ["on Saturday"]
     }
   ]
 }
