@@ -37,6 +37,13 @@
         "digest"
       ],
       "schedule": ["on Saturday"]
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "groupName": "github-actions",
+      "schedule": [
+        "after 2am and before 3am"
+      ]
     }
   ]
 }
