@@ -17,9 +17,6 @@
   },
   "labels": ["renovate"],
   "rangeStrategy": "bump",
-  "npm": {
-    "commitMessageTopic": "{{prettyDepType}} {{depName}}"
-  },
   "vulnerabilityAlerts": {
     "labels": ["security", "renovate"],
     "commitMessageSuffix": "[SECURITY]"
