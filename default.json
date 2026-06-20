@@ -18,7 +18,7 @@
   "labels": ["renovate"],
   "rangeStrategy": "bump",
   "vulnerabilityAlerts": {
-    "labels": ["security", "renovate"],
+    "labels": ["security"],
     "commitMessageSuffix": "[SECURITY]"
   },
   "packageRules": [
