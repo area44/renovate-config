@@ -24,21 +24,20 @@
   "packageRules": [
     {
       "matchDatasources": ["npm"],
-      "minimumReleaseAge": "24 hours"
+      "minimumReleaseAge": "24 hours",
+      "addLabels": ["node"],
+      "schedule": ["before 5am on Saturday"]
     },
     {
-      "matchUpdateTypes": [
-        "minor",
-        "patch",
-        "pin",
-        "digest"
-      ],
-      "schedule": ["on Saturday"]
+      "matchDatasources": ["pypi"],
+      "minimumReleaseAge": "24 hours",
+      "addLabels": ["python"],
+      "schedule": ["before 5am on Saturday"]
     },
     {
       "matchManagers": ["github-actions"],
       "schedule": [
-        "after 2am and before 3am"
+        "after 2am and before 3am on Saturday"
       ]
     }
   ]
