@@ -4,3 +4,9 @@ allowBuilds:
   dtrace-provider: false
   protobufjs: false
   re2: false
+autoDedupe: true
+minimumReleaseAge: 0
+shellEmulator: true
+trustLockfile: true
+trustPolicy: no-downgrade
+trustPolicyIgnoreAfter: 604800
