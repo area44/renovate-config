@@ -1,5 +1,6 @@
 {
-  "description": "Shareable Renovate config presets by AREA44",
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Shareable Renovate configuration presets by AREA44",
   "extends": [
     "config:recommended",
     ":dependencyDashboard",
@@ -9,38 +10,54 @@
     "abandonments:recommended",
     ":maintainLockFilesWeekly",
     "group:allNonMajor",
-    ":semanticCommitTypeAll(chore)",
-    ":automergeAll"
+    ":semanticCommitTypeAll(chore)"
   ],
   "meteor": {
     "enabled": false
   },
   "labels": ["renovate"],
   "rangeStrategy": "bump",
+  "internalChecksFilter": "strict",
+  "minimumReleaseAge": "24 hours",
   "vulnerabilityAlerts": {
-    "labels": ["security"],
-    "commitMessageSuffix": "[SECURITY]"
+    "labels": ["renovate", "security"],
+    "commitMessageSuffix": "[SECURITY]",
+    "rangeStrategy": "update-lockfile"
   },
   "packageRules": [
     {
-      "matchDatasources": ["npm"],
-      "minimumReleaseAge": "24 hours",
+      "description": "Group and schedule npm dependencies",
+      "matchManagers": ["npm"],
       "groupName": "node",
       "addLabels": ["node"],
-      "schedule": ["before 5am on Saturday"]
+      "schedule": ["before 5am on Saturday"],
+      "minimumReleaseAge": "24 hours"
     },
     {
-      "matchDatasources": ["pypi"],
-      "minimumReleaseAge": "24 hours",
+      "description": "Group and schedule Python dependencies",
+      "matchManagers": ["pip", "poetry", "uv"],
       "groupName": "python",
       "addLabels": ["python"],
-      "schedule": ["before 5am on Saturday"]
+      "schedule": ["before 5am on Saturday"],
+      "minimumReleaseAge": "24 hours"
     },
     {
+      "description": "Schedule GitHub Actions updates",
       "matchManagers": ["github-actions"],
-      "schedule": [
-        "after 2am and before 3am on Saturday"
-      ]
+      "addLabels": ["github-actions"],
+      "schedule": ["after 2am and before 6am on Saturday"]
+    },
+    {
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "automerge": false
     }
   ]
 }
