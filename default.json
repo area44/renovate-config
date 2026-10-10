@@ -25,12 +25,14 @@
     {
       "matchDatasources": ["npm"],
       "minimumReleaseAge": "24 hours",
+      "groupName": "node",
       "addLabels": ["node"],
       "schedule": ["before 5am on Saturday"]
     },
     {
       "matchDatasources": ["pypi"],
       "minimumReleaseAge": "24 hours",
+      "groupName": "python",
       "addLabels": ["python"],
       "schedule": ["before 5am on Saturday"]
     },
