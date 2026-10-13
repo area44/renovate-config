@@ -2,22 +2,22 @@
   "name": "@area44/renovate-config",
   "version": "0.0.0",
   "description": "Shareable Renovate config presets by AREA44.",
-  "license": "MIT",
   "homepage": "https://github.com/AREA44/renovate-config",
+  "bugs": {
+    "url": "https://github.com/AREA44/renovate-config/issues"
+  },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AREA44/renovate-config.git"
   },
-  "bugs": {
-    "url": "https://github.com/AREA44/renovate-config/issues"
-  },
+  "files": [
+    "default.json"
+  ],
   "scripts": {
     "validate": "renovate-config-validator default.json",
     "test": "pnpm validate"
   },
-  "files": [
-    "default.json"
-  ],
   "devDependencies": {
     "renovate": "^44.132.2"
   },
