@@ -15,8 +15,6 @@
   "meteor": {
     "enabled": false
   },
-  "prTitle": "chore(deps): update {{{groupName}}} {{{depName}}} to {{{newVersion}}}",
-  "commitMessagePrefix": "chore(deps): ",
   "automerge": true,
   "labels": ["renovate"],
   "rangeStrategy": "bump",
@@ -29,20 +27,14 @@
   },
   "packageRules": [
     {
-      "description": "Group and schedule npm dependencies",
       "matchManagers": ["npm"],
-      "groupName": "node",
-      "addLabels": ["node"],
-      "schedule": ["before 5am on Saturday"],
-      "minimumReleaseAge": "24 hours"
+      "addLabels": ["nodejs"],
+      "schedule": ["before 5am on Saturday"]
     },
     {
-      "description": "Group and schedule Python dependencies",
       "matchManagers": ["pip", "poetry", "uv"],
-      "groupName": "python",
       "addLabels": ["python"],
-      "schedule": ["before 5am on Saturday"],
-      "minimumReleaseAge": "24 hours"
+      "schedule": ["before 5am on Saturday"]
     },
     {
       "description": "Schedule GitHub Actions updates",
