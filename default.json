@@ -15,6 +15,9 @@
   "meteor": {
     "enabled": false
   },
+  "prTitle": "chore(deps): update {{{groupName}}} {{{depName}}} to {{{newVersion}}}",
+  "commitMessagePrefix": "chore(deps): ",
+  "automerge": true,
   "labels": ["renovate"],
   "rangeStrategy": "bump",
   "internalChecksFilter": "strict",
@@ -46,14 +49,6 @@
       "matchManagers": ["github-actions"],
       "addLabels": ["github-actions"],
       "schedule": ["after 2am and before 6am on Saturday"]
-    },
-    {
-      "matchUpdateTypes": ["patch"],
-      "automerge": true
-    },
-    {
-      "matchUpdateTypes": ["minor"],
-      "automerge": true
     },
     {
       "matchUpdateTypes": ["major"],
