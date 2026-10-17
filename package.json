@@ -19,7 +19,6 @@
     "test": "pnpm validate"
   },
   "devDependencies": {
-    "re2": "^1.27.0",
     "renovate": "^44.132.2"
   },
   "packageManager": "pnpm@12.9.0"
