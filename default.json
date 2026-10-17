@@ -19,7 +19,7 @@
   "labels": ["renovate"],
   "rangeStrategy": "bump",
   "internalChecksFilter": "strict",
-  "minimumReleaseAge": "24 hours",
+  "minimumReleaseAge": "1 day",
   "vulnerabilityAlerts": {
     "labels": ["renovate", "security"],
     "commitMessageSuffix": "[SECURITY]",
@@ -29,18 +29,18 @@
     {
       "matchManagers": ["npm"],
       "addLabels": ["nodejs"],
-      "schedule": ["before 5am on Saturday"]
+      "schedule": ["before 5am on Sunday"]
     },
     {
       "matchManagers": ["pip", "poetry", "uv"],
       "addLabels": ["python"],
-      "schedule": ["before 5am on Saturday"]
+      "schedule": ["before 5am on Sunday"]
     },
     {
       "description": "Schedule GitHub Actions updates",
       "matchManagers": ["github-actions"],
       "addLabels": ["github-actions"],
-      "schedule": ["after 2am and before 6am on Saturday"]
+      "schedule": ["after 2am and before 6am on Sunday"]
     },
     {
       "matchUpdateTypes": ["major"],
