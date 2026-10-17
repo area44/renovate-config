@@ -3,7 +3,7 @@ allowBuilds:
   core-js-pure: false
   dtrace-provider: false
   protobufjs: false
-  re2: false
+  re2: true
 autoDedupe: true
 minimumReleaseAge: 0
 shellEmulator: true
