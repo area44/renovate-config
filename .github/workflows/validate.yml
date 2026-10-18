@@ -1,12 +1,10 @@
 name: Validate Config
 
 on:
-  pull_request:
-    branches:
-      - main
   push:
     branches:
       - main
+  pull_request:
 
 permissions:
   contents: read
@@ -24,4 +22,4 @@ jobs:
           install: true
           cache: true
 
-      - run: pnpm test
+      - run: pnpm validate
