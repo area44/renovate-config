@@ -19,7 +19,6 @@
   "labels": ["renovate"],
   "rangeStrategy": "bump",
   "internalChecksFilter": "strict",
-  "minimumReleaseAge": "1 day",
   "vulnerabilityAlerts": {
     "labels": ["renovate", "security"],
     "commitMessageSuffix": "[SECURITY]",
