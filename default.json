@@ -1,3 +1,4 @@
+
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Shareable Renovate configuration presets by AREA44",
@@ -31,7 +32,7 @@
       "schedule": ["before 5am on Sunday"]
     },
     {
-      "matchManagers": ["pip", "poetry", "uv"],
+      "matchCategories": ["python"],
       "addLabels": ["python"],
       "schedule": ["before 5am on Sunday"]
     },
