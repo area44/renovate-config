@@ -18,7 +18,7 @@
     "validate": "renovate-config-validator default.json"
   },
   "devDependencies": {
-    "renovate": "^44.239.1"
+    "renovate": "^44.257.9"
   },
   "packageManager": "pnpm@12.21.0"
 }
